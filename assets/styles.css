@@ -122,10 +122,17 @@ body {
     padding-bottom: .8em;
 }
 
+.apresentacao__social__links a:hover {
+    color: rgba(70, 70, 70, 0.5);
+}
+
 .apresentacao__conteudo__info {
     align-self: center;
 }
 
+.fa-github {
+    color: var(--color-text-primary);
+}
 .fa-linkedin {
     color: #0e76a8;
 }
@@ -184,6 +191,12 @@ body {
 
 @media(max-width:850px) {
     .wave__container::before {
+        height: 65px
+    }
+}
+
+@media(max-width:850px) {
+    .wave__container__reverse::before {
         height: 65px
     }
 }
@@ -505,12 +518,12 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    opacity: 0; 
-    transition: opacity 0.3s ease; 
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .projeto:hover .botoes {
-    opacity: 1; 
+    opacity: 1;
 }
 
 .botao-github,
@@ -664,17 +677,4 @@ button:hover {
 
 .rodape a:hover {
     color: var(--color-default-white);
-}
-
-
-@media screen and (max-width: 900px) {
-    .carousel img {
-        width: calc(100% / 2);
-    }
-}
-
-@media screen and (max-width: 550px) {
-    .carousel img {
-        width: 100%;
-    }
 }
