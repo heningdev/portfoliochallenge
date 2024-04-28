@@ -30,5 +30,8 @@ document.getElementById('jogosecreto').addEventListener("click", function () {
 document.getElementById('portfolio').addEventListener("click", function () {
     window.location.href = "#apresentacao";
 })
+document.getElementById('codf').addEventListener("click", function () {
+    window.open("https://heningdev.github.io/decodificador-de-texto/", "_blank");
+})
 
 
