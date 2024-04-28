@@ -14,10 +14,10 @@ window.addEventListener('scroll', function () {
 });
 // EXIBIÇÃO PALAVRA CHAVE CARDS SOBRE MIM
 function showMessage() {
-    document.getElementById("mensagem").style.visibility = "visible";
+    document.getElementById("mensagemFlut").style.visibility = "visible";
 }
 function hideMessage() {
-    document.getElementById("mensagem").style.visibility = "hidden";
+    document.getElementById("mensagemFlut").style.visibility = "hidden";
 }
 
 // LINKS DOS PROJETOS

@@ -298,7 +298,7 @@ body {
     color: #9AC8CD;
 }
 
-.mensagem {
+.mensagemFlut {
     position: absolute;
     top: calc(70%);
     left: 50%;
