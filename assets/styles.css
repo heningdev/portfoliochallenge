@@ -6,10 +6,8 @@
     --color-secondary: #f5f5f5;
     --color-default-white: #ffffff;
     --color-default-black: #111;
-
     --color-text-primary: #464646;
     --color-text-secondary: #ffffff;
-
     --font-primary: "Raleway", sans-serif;
 }
 
@@ -560,6 +558,7 @@ body {
 
 .projeto__descricao {
     align-self: left;
+    opacity: 0;
 }
 
 .projeto__descricao__titulo {
@@ -595,13 +594,12 @@ body {
     opacity: 0;
 }
 
-.projeto:hover .botoes__tecnologias  {
+.projeto:hover .botoes__tecnologias,
+.projeto:hover .botoes,
+.projeto:hover .projeto__descricao {
     opacity: 1;
 }
 
-.projeto:hover .botoes {
-    opacity: 1;
-}
 
 .botao-github,
 .botao-demo {
