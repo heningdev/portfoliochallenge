@@ -62,41 +62,59 @@
 
     <div class="wave__container"></div>
 
-
     <section id="sobre" class="sobre">
 
         <div class="sobre__conteudo">
-            <h2 class="sobre__titulo">Sobre mim</h2>
-            <p class="sobre__descricao">
-                Olá! Sou o Hening, um entusiasta de tecnologia de 32 anos, nascido e criado em Brasília, DF. Meu
-                fascínio pelo mundo da tecnologia começou lá em 2004, quando criei meu próprio servidor para um jogo
-                online da época. Esse projeto envolveu a configuração de servidores, gerenciamento de banco de dados e
-                até mesmo a criação de um website para a comunidade do jogo.
-            </p>
-
-            <p class="sobre__descricao">
-                Atualmente eu sou estudante de análise e desenvolvimento de sistemas, e diariamente aprimoro minhas
-                habilidades como desenvolvedor com cursos e consumo de conteúdos sobre o assunto.
-            </p>
+            <div class="sobre__conteudo__container">
+                <h2 class="sobre__titulo">Sobre mim</h2>
+                <p class="sobre__descricao">
+                    Olá! Sou o Hening, um entusiasta de tecnologia de 32 anos, nascido e criado em Brasília, DF. Meu
+                    fascínio pelo mundo da tecnologia começou lá em 2004, quando criei meu próprio servidor para um jogo
+                    online da época. Esse projeto envolveu a configuração de servidores, gerenciamento de banco de dados e
+                    até mesmo a criação de um website para a comunidade do jogo.
+                </p>
+                <p class="sobre__descricao">
+                    Atualmente eu sou estudante de análise e desenvolvimento de sistemas, e diariamente aprimoro minhas
+                    habilidades como desenvolvedor com cursos e consumo de conteúdos sobre o assunto.
+                </p>
+            </div>
+            <div class="sobre__perfil__img">
+                <img src="/assets/img/perfil_img.png" alt="Foto de perfil">
+            </div>
         </div>
         <div class="sobre__cards__container">
             <div class="sobre__card zoom-in">
-                <i class="fa-solid fa-code"></i>
-                <div class="mensagem" id="mensagemFlut">Desenvolver</div>
+                <i class="fa-solid fa-compass"></i>
+                <div class="mensagem" id="mensagemFlut">Usabilidade</div>
             </div>
             <div class="sobre__card zoom-in">
-                <i class="fa-solid fa-brush"></i>
-                <div class="mensagem" id="mensagemFlut">Criar</div>
+                <i class="fa-solid fa-handshake-angle"></i>
+                <div class="mensagem" id="mensagemFlut">Acessibilidade</div>
+
+            </div>
+            <!-- <div class="sobre__card zoom-in">
+                <i class="fa-solid fa-mobile-screen"></i>
+                <div class="mensagem" id="mensagemFlut">Responsividade</div>
+
+            </div> -->
+            <div class="sobre__card zoom-in">
+                <i class="fa-solid fa-gauge"></i>
+                <div class="mensagem" id="mensagemFlut">Performance</div>
 
             </div>
             <div class="sobre__card zoom-in">
-                <i class="fa-solid fa-book-open"></i>
-                <div class="mensagem" id="mensagemFlut">Aprimorar</div>
+                <i class="fa-solid fa-puzzle-piece"></i>
+                <div class="mensagem" id="mensagemFlut">Consistência</div>
 
             </div>
             <div class="sobre__card zoom-in">
-                <i class="fa-solid fa-gear"></i>
-                <div class="mensagem" id="mensagemFlut">Produzir</div>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <div class="mensagem" id="mensagemFlut">Clareza</div>
+
+            </div>
+            <div class="sobre__card zoom-in">
+                <i class="fa-solid fa-palette"></i>
+                <div class="mensagem" id="mensagemFlut">Estética</div>
 
             </div>
         </div>
@@ -192,15 +210,34 @@
         <h2 class="projetos__titulo">Projetos</h2>
         <div class="projetos__container">
             <div class="projeto zoom-img">
+                <div class="projeto__descricao">
+                    <h1 class="projeto__descricao__titulo">
+                        <span>Petlife</span>  - Pagina web para clínica veterinária
+                    </h1>
+                </div>
                 <img src="assets/img/petlife_print.png" alt="img" draggable="false" id="petlife">
+                <div class="botoes__tecnologias">
+                    <i class="fa-brands fa-html5"></i>
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <i class="fa-brands fa-js"></i>
+                </div>
                 <div class="botoes">
                     <a href="https://github.com/heningdev/PetLife" target="_blank" class="botao-github">Github</a>
                     <a href="https://pet-life-gamma.vercel.app/#inicio" target="_blank" class="botao-demo">Demo</a>
                 </div>
             </div>
             <div class="projeto zoom-img">
-
+                <div class="projeto__descricao">
+                    <h1 class="projeto__descricao__titulo">
+                        <span>Número Secreto</span>  - Jogo do número secreto
+                    </h1>
+                </div>
                 <img src="assets/img/jogosecreto__print.png" alt="img" draggable="false" id="jogosecreto">
+                <div class="botoes__tecnologias">
+                    <i class="fa-brands fa-html5"></i>
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <i class="fa-brands fa-js"></i>
+                </div>
                 <div class="botoes">
                     <a href="https://github.com/heningdev/Jogo-do-numero-secreto" class="botao-github"
                         target="_blank">Github</a>
@@ -208,8 +245,17 @@
                 </div>
             </div>
             <div class="projeto zoom-img">
-
+                <div class="projeto__descricao">
+                    <h1 class="projeto__descricao__titulo">
+                        <span>Portfólio</span>  - Página atual onde você está
+                    </h1>
+                </div>
                 <img src="assets/img/devport__print.png" alt="img" draggable="false" id="portfolio">
+                <div class="botoes__tecnologias">
+                    <i class="fa-brands fa-html5"></i>
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <i class="fa-brands fa-js"></i>
+                </div>
                 <div class="botoes">
                     <a href="https://github.com/heningdev/portfoliochallenge" target="_blank"
                         class="botao-github">Github</a>
@@ -217,7 +263,17 @@
                 </div>
             </div>
             <div class="projeto zoom-img">
+                <div class="projeto__descricao">
+                    <h1 class="projeto__descricao__titulo">
+                        <span>Codificador</span>  - Criptografia e Descriptografia de textos
+                    </h1>
+                </div>
                 <img src="assets/img/decod__print.png" alt="img" draggable="false" id="codf">
+                <div class="botoes__tecnologias">
+                    <i class="fa-brands fa-html5"></i>
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <i class="fa-brands fa-js"></i>
+                </div>
                 <div class="botoes">
                     <a href="https://github.com/heningdev/decodificador-de-texto" target="_blank"
                         class="botao-github">Github</a>
