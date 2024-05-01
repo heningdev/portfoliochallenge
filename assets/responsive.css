@@ -1,4 +1,6 @@
-@media only screen and (max-width: 768px) {
+@import url('assets/styles.css');
+
+@media  only screen and (max-width: 767px) {
 
     .cabecalho__logo {
         visibility: hidden;
@@ -22,8 +24,8 @@
     }
 
     .apresentacao {
-        margin: 24.4% 0% 0% 0%;
-        padding: 10% 0%;
+        margin: 10% 0% 0% 0%;
+        padding: 24% 0% 5% 0%;
         width: 241%;
     }
 
