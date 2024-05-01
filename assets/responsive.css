@@ -1,0 +1,183 @@
+@media only screen and (max-width: 768px) {
+
+    .cabecalho__logo {
+        visibility: hidden;
+    }
+
+
+    .cabecalho {
+        background: var(--color-secondary);
+        display: flex;
+        position: fixed;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s ease;
+        z-index: 2;
+        top: 0;
+    }
+
+    .cabecalho__navegacao {
+        font-size: 1.2em;
+        width: 100%;
+    }
+
+    .apresentacao {
+        margin: 24.4% 0% 0% 0%;
+        padding: 10% 0%;
+        width: 241%;
+    }
+
+    .apresentacao__conteudo {
+        gap: 0em;
+        width: 80%;
+    }
+
+    .apresentacao__conteudo__info {
+        width: 100%;
+    }
+
+    .apresentacao__conteudo h1 {
+        font-size: 2.75em;
+        width: 100%;
+    }
+
+    .apresentacao__conteudo p {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        font-size: 1.5em;
+    }
+
+    .apresentacao__conteudo__img {
+        display: none;
+        width: 14em;
+        height: 10em;
+        left: 0;
+    }
+
+    .apresentacao__social__links {
+        justify-content: center;
+        font-size: 1.4em;
+    }
+
+    .wave__container {
+        height: 10vh;
+        background-color: #f5f5f5;
+        position: relative;
+        width: 241%;
+    }
+
+    .wave__container__reverse {
+        height: 10vh;
+        background-color: #f5f5f5;
+        position: relative;
+        width: 241%;
+    }
+
+    .wave__container::before {
+        content: "";
+        width: 100%;
+        height: 4em;
+        position: absolute;
+        bottom: -0.3%;
+        left: 0;
+        background-size: auto;
+        background-repeat: repeat no-repeat;
+        background-position: 20vw bottom;
+        background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  134' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 98L50 92C100 86 200 74 300 50C400 26 500 -10 600 2C700 14 800 74 900 98C1000 122 1100 110 1150 104L1200 98V134H1150C1100 134 1000 134 900 134C800 134 700 134 600 134C500 134 400 134 300 134C200 134 100 134 50 134H0V98Z' fill='%23eaf2fd'/></svg>");
+    }
+    
+    .wave__container__reverse {
+        height: 20vh;
+        background-color: #eaf2fd;
+        position: relative;
+    }
+    
+
+    .sobre {
+        width: 241%;
+        padding: 10% 0%;
+    }
+
+    .sobre__cards__container {
+        gap: 2em;
+    }
+
+    .sobre__conteudo {
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .sobre__descricao {
+        width: 99%;
+    }
+
+    .sobre__perfil__img {
+        align-self: center;
+    }
+
+    .skills, .hobbies {
+        width: 241%;
+    }
+
+    .skills__cards__container, .hobbies__cards__container {
+        width: 95%;
+        gap: 1em;
+    }
+
+    .skills__card, .hobbies__card {
+        gap: 1em;
+        height: 9em;
+    }
+
+    .hobbies {
+        padding-bottom: 20%;
+    }
+
+    .formacao {
+        padding-top: 20%;
+        padding-bottom: 20%;
+        width: 241%;
+        gap: 4em;
+    }
+
+    .formacao__cards__container {
+        gap: 1em;
+    }
+
+    .projetos {
+        width: 241%;
+        gap: 2em;
+        padding-bottom: 20%;
+    }
+
+    .projetos__container {
+        gap: 3em;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .contato {
+        width: 241%;
+        padding-bottom: 20%;
+    }
+    .contato__conteudo {
+        flex-direction: column;
+        justify-content: center;
+        gap: 2em;
+    }
+
+    .contato__conteudo__descricao h2 {
+        width: 150%;
+    }
+
+    .contato__conteudo__descricao p,
+    .contato__conteudo__descricao img {
+        display: none;
+    }
+
+    .rodape {
+        width: 241%;
+    }
+
+}
+

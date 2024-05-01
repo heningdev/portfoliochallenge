@@ -11,12 +11,16 @@
     --font-primary: "Raleway", sans-serif;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: var(--font-primary);
-    width: 100%;
 }
 
 /* REDUÇÃO */
+body,
 .sobre,
 .apresentacao,
 .skills,
@@ -24,7 +28,8 @@ body {
 .formacao,
 .projetos,
 .contato,
-.rodape {
+.rodape,
+.apresentacao  {
     width: 100%;
     height: auto;
 }
@@ -34,8 +39,8 @@ body {
     background: var(--color-secondary);
     display: flex;
     justify-content: space-around;
-    width: 100%;
     padding: 1.5em 0em;
+    width: 100%;
     transition: background-color 0.3s ease;
     z-index: 2;
     top: 0;
@@ -51,6 +56,7 @@ body {
 }
 
 .cabecalho.fixed {
+    display: flex;
     position: fixed;
     background: #0e76a8;
     color: var(--color-text-secondary);
@@ -74,7 +80,7 @@ body {
     gap: 2em;
     font-weight: 400;
     font-size: 1em;
-    height: 2em;
+    height: 2em;   
 }
 
 .cabecalho__navegacao a {
@@ -255,8 +261,8 @@ body {
 
 .sobre__perfil__img img {
     border-radius: 50%;
-    width: 100%;
-    height: 100%;
+    width: 20em;
+    height: 20em;
 }
 
 .sobre__descricao {
@@ -300,14 +306,14 @@ body {
     color: #66B3FF ;
 }
 
-.fa-handshake-angle {
+/* .fa-handshake-angle {
     color: #66CC99 ;
-}
-
-
-/* .fa-mobile-screen {
-    color: #A9A9A9 ;
 } */
+
+
+.fa-mobile-screen {
+    color: #A9A9A9 ;
+}
 
 .fa-gauge {
     color: #00CCCC ;
@@ -349,7 +355,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 4.5% 0% 2% 0%;
+    padding: 4.5% 0% 4% 0%;
     gap: 4em;
 }
 
@@ -633,7 +639,6 @@ body {
 .contato {
     display: flex;
     flex-direction: column;
-    width: 100%;
     text-align: center;
     align-items: center;
     background: var(--color-primary);
