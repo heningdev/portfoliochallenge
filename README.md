@@ -21,7 +21,8 @@ E links como background na imagem de cada projeto.
 
     
 ## Demo
-[Visualizar no GitHub Pages](https://heningdev.github.io/portfoliochallenge/#)
+<a href="https://heningdev.github.io/portfoliochallenge/#" target="_blank">Visualizar no GitHub Pages</a>
+
 
 ## Screenshot
 <img src="devport__print.png" alt="Screenshot" width="500">
