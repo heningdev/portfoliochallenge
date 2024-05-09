@@ -730,9 +730,9 @@ label {
 }
 
 button {
-    padding: .6em 1.2em;
+    padding: .8em 1em;
     background-color: #2a7ae4;
-    width: 40%;
+    width: 50%;
     place-self: center;
     color: var(--color-default-white);
     border: none;
