@@ -2,14 +2,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('assets/responsive.css');
 
+
+
+
 :root {
+
+    --font-primary: "Raleway", sans-serif;
+}
+
+[data-theme="light"] {
     --color-primary: #EAF2FD;
     --color-secondary: #f5f5f5;
     --color-default-white: #ffffff;
     --color-default-black: #111;
     --color-text-primary: #464646;
     --color-text-secondary: #ffffff;
-    --font-primary: "Raleway", sans-serif;
+    --color-text-hover-btn: #0056b3;
+    --color-text-btn: #ffffff;
+}
+
+[data-theme="light"] .fa-sun {
+    display: none;
+}
+
+[data-theme="dark"] {
+    --color-primary: #1a1a2e;
+    --color-secondary: #2e2e3e;
+    --color-default-white: #111;
+    --color-default-black: #ffffff;
+    --color-text-primary: #f5f5f5;
+    --color-text-secondary: #eaf2fd;
+    --color-text-hover-btn: #0056b3;
+    --color-text-btn: #ffffff;
+}
+
+[data-theme="dark"] .fa-moon {
+    display: none;
 }
 
 * {
@@ -22,6 +50,8 @@ body {
 
 /* REDUÇÃO */
 body,
+header,
+.cabecalho,
 .sobre,
 .apresentacao,
 .skills,
@@ -30,7 +60,7 @@ body,
 .projetos,
 .contato,
 .rodape,
-.apresentacao  {
+.apresentacao {
     width: 100%;
     height: auto;
 }
@@ -59,10 +89,14 @@ body,
 .cabecalho.fixed {
     display: flex;
     position: fixed;
-    background: #0e76a8;
-    color: var(--color-text-secondary);
+    background: rgba(14, 118, 168, 1);
+    backdrop-filter: blue(10px);
     z-index: 2;
     top: 0;
+}
+
+.cabecalho.fixed a {
+    color: var(--color-primary);
 }
 
 .cabecalho.fixed a:hover {
@@ -81,13 +115,14 @@ body,
     gap: 2em;
     font-weight: 400;
     font-size: 1em;
-    height: 2em;   
+    height: 2em;
 }
 
 .cabecalho__navegacao a {
     display: flex;
     align-items: center;
     height: 2em;
+    color: var(--color-text-primary);
 }
 
 .cabecalho__navegacao a:hover {
@@ -103,6 +138,30 @@ body,
 .cabecalho__navegacao__contato {
     font-weight: 600;
 }
+
+/* Toggle Theme */
+.tema {
+    display: flex;
+    background: none;
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50%;
+}
+
+.fa-sun {
+    color: #EEAD2D;
+    font-size: 1.4em;
+}
+
+.fa-moon {
+    color: #F2C438;
+    font-size: 1.4em;
+}
+
+
 
 /* APRESENTAÇÃO */
 .apresentacao {
@@ -179,58 +238,47 @@ body,
     width: 65%;
 }
 
-/* Shape Wave */
-.wave__container {
-    height: 10vh;
-    background-color: #f5f5f5;
-    position: relative;
-}
 
-.wave__container::before {
-    content: "";
-    width: 100%;
-    height: 4em;
+/* WAVE TOP */
+.custom-shape-divider-top-1716089508 {
     position: absolute;
-    bottom: -0.3%;
     left: 0;
-    background-size: auto;
-    background-repeat: repeat no-repeat;
-    background-position: 20vw bottom;
-    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  134' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 98L50 92C100 86 200 74 300 50C400 26 500 -10 600 2C700 14 800 74 900 98C1000 122 1100 110 1150 104L1200 98V134H1150C1100 134 1000 134 900 134C800 134 700 134 600 134C500 134 400 134 300 134C200 134 100 134 50 134H0V98Z' fill='%23eaf2fd'/></svg>");
-}
-
-.wave__container__reverse {
-    height: 20vh;
-    background-color: #eaf2fd;
-    position: relative;
-}
-
-.wave__container__reverse::before {
-    content: "";
     width: 100%;
-    height: 4em;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1716089508 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + .1em);
+    height: 3.9em;
+}
+
+.custom-shape-divider-top-1716089508 .shape-fill {
+    fill: var(--color-secondary);
+}
+
+/* Wave BOT */
+.custom-shape-divider-top-1716089865 {
     position: absolute;
-    bottom: -0.3%;
     left: 0;
-    background-size: auto;
-    background-repeat: repeat no-repeat;
-    background-position: 20vw bottom;
-    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  134' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 98L50 92C100 86 200 74 300 50C400 26 500 -10 600 2C700 14 800 74 900 98C1000 122 1100 110 1150 104L1200 98V134H1150C1100 134 1000 134 900 134C800 134 700 134 600 134C500 134 400 134 300 134C200 134 100 134 50 134H0V98Z' fill='%23f5f5f5'/></svg>");
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
 }
 
-
-@media(max-width:850px) {
-    .wave__container::before {
-        height: 65px
-    }
+.custom-shape-divider-top-1716089865 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + .1em);
+    height: 3.8em;
 }
 
-@media(max-width:850px) {
-    .wave__container__reverse::before {
-        height: 65px
-    }
+.custom-shape-divider-top-1716089865 .shape-fill {
+    fill: var(--color-primary);
 }
-
 
 /* Sobre mim  */
 .sobre {
@@ -304,7 +352,7 @@ body,
 }
 
 .fa-compass {
-    color: #66B3FF ;
+    color: #66B3FF;
 }
 
 /* .fa-handshake-angle {
@@ -313,23 +361,23 @@ body,
 
 
 .fa-mobile-screen {
-    color: #A9A9A9 ;
+    color: #A9A9A9;
 }
 
 .fa-gauge {
-    color: #00CCCC ;
+    color: #00CCCC;
 }
 
 .fa-puzzle-piece {
-    color: #FFCC99  ;
+    color: #FFCC99;
 }
 
 .fa-magnifying-glass {
-    color: #A9A9A9 ;
+    color: #A9A9A9;
 }
 
 .fa-palette {
-    color: #99CC99  ;
+    color: #99CC99;
 }
 
 .mensagem {
@@ -525,6 +573,7 @@ body,
     gap: .5em;
     font-family: "Roboto", sans-serif;
     font-weight: 500;
+    color: var(--color-text-primary);
 }
 
 /* Projetos */
@@ -572,6 +621,9 @@ body,
     font-size: 1em;
 }
 
+.projeto__descricao__titulo {
+    color: var(--color-text-primary);
+}
 .projeto__descricao__titulo span {
     font-weight: 600;
 }
@@ -613,7 +665,7 @@ body,
     display: inline-block;
     padding: 10px 20px;
     background-color: var(--color-text-primary);
-    color: #fff;
+    color: var(--color-primary);
     text-decoration: none;
     border-radius: 5px;
     margin: 5px;
@@ -621,7 +673,8 @@ body,
 
 .botao-github:hover,
 .botao-demo:hover {
-    background-color: #0056b3;
+    background-color: var(--color-text-hover-btn);
+    color: var(--color-text-btn);
 }
 
 .zoom-img {
@@ -666,6 +719,7 @@ body,
     align-items: center;
     width: 40%;
     gap: 5em;
+    color: var(--color-text-primary);
 }
 
 .contato__conteudo__descricao h2 {

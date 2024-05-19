@@ -1,3 +1,23 @@
+const pageTheme = document.querySelector('html[data-theme="light"]');
+const themeBtn = document.querySelector('.tema');
+const moonIcon = document.querySelector('.fa-moon');
+const sunIcon = document.querySelector('.fa-sun');
+
+themeBtn.addEventListener('click', () => {
+    const activeTheme = pageTheme.getAttribute('data-theme');
+    const newTheme = activeTheme === 'light' ? 'dark' : 'light';
+    pageTheme.setAttribute('data-theme', newTheme);
+
+    if (newTheme === 'dark') {
+        moonIcon.style.display = 'none';
+        sunIcon.style.display = 'block';
+    } else {
+        moonIcon.style.display = 'block';
+        sunIcon.style.display = 'none';
+    }
+
+});
+
 // TRANSIÇÃO DO MENU DE NAVEGAÇÃO AO ROLAR
 window.addEventListener('scroll', function () {
     var cabecalho = document.getElementById('cabecalho');
@@ -33,5 +53,4 @@ document.getElementById('portfolio').addEventListener("click", function () {
 document.getElementById('codf').addEventListener("click", function () {
     window.open("https://heningdev.github.io/decodificador-de-texto/", "_blank");
 })
-
 
