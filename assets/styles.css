@@ -172,7 +172,7 @@ header,
 
 /* APRESENTAÇÃO */
 .apresentacao {
-    background: url(assets/img/fundo2.jpg) no-repeat top / cover;
+    background: url(./assets/img/fundo2.jpg) no-repeat top / cover;
 }
 
 .apresentacao__container {
