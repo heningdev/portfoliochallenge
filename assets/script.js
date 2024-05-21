@@ -23,8 +23,10 @@ window.addEventListener('scroll', function () {
     var cabecalho = document.getElementById('cabecalho');
     var cabecalho__logo = document.getElementById('cabecalho__logo');
     var altura = window.scrollY;
+    var apresentacao = document.getElementById('apresentacao');
+    var alturaApresentacao = apresentacao.offsetTop + apresentacao.offsetHeight;
 
-    if (altura > 0) {
+    if (altura > alturaApresentacao) {
         cabecalho.classList.add('fixed');
         cabecalho__logo.classList.add('fixed');
     } else {
