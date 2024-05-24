@@ -72,3 +72,13 @@ document.getElementById('codf').addEventListener("click", function () {
     window.open("https://heningdev.github.io/decodificador-de-texto/", "_blank");
 })
 
+// LINK GO TO TOP
+document.getElementById('botao__voltar').addEventListener('click', function() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+})
+
+//LINK CONTATO
+document.getElementById('contato__btn').addEventListener('click', ()  => {
+    document.getElementById('contato').scrollIntoView({ behavior: 'smooth'});
+});
+

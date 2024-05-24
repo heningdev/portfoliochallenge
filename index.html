@@ -44,29 +44,37 @@
             </button>
         </nav>
     </header>
-    
-    
+
+
     <section id="apresentacao" class="apresentacao">
         <div class="apresentacao__container">
             <div class="apresentacao__container__conteudo">
-                <img class="apresentacao__perfil__img" src="assets/img/perfil_img.png" alt="" >
+                <img class="apresentacao__perfil__img" src="assets/img/perfil_img.png" alt="">
                 <div class="apresentacao__container__info">
                     <h2 class="apresentacao__perfil__nome">Hening Pereira</h2>
                     <p class="apresentacao__perfil__descricao">Desenvolvimento Web</p>
                 </div>
                 <div class="apresentacao__perfil__social">
-                    <i class="fa-brands fa-github"></i>
-                    <i class="fa-brands fa-instagram gradient-icon"></i>
-                    <i class="fa-brands fa-linkedin-in"></i>
-                    <i class="fa-regular fa-file"></i>
+                    <a href="https://github.com/heningdev" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/hng.psj" target="_blank">
+                        <i class="fa-brands fa-instagram gradient-icon"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/hening-dev/" target="_blank">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-regular fa-file"></i>
+                    </a>
                 </div>
-                <button class="contato__btn">
-                    <a href="#contato">Contato</a>
+                <button class="contato__btn" id="contato__btn">
+                    Contato
                 </button>
             </div>
         </div>
     </section>
-    
+
     <section id="sobre" class="sobre">
         <div class="sobre__conteudo">
             <div class="sobre__conteudo__container">
@@ -98,7 +106,7 @@
                 </div>
                 <div class="sobre__card__square zoom-in">
                     <img src="assets/img/design-de-ux.png" alt="">
-                </div> 
+                </div>
             </div>
         </div>
 
@@ -361,7 +369,15 @@
             </form>
         </div>
     </section>
-
+    <div class="botao__voltar" id="botao__voltar">
+        <button class="botao__voltar-btn">
+            <svg class="svgIcon" viewBox="0 0 384 512">
+                <path
+                    d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z">
+                </path>
+            </svg>
+        </button>
+    </div>
     <footer id="rodape" class="rodape">
         <p>Desenvolvido para o desafio Alura 2024 - <a href="https://github.com/heningdev" target="_blank">hng.dev</a>
         </p>

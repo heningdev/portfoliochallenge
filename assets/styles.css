@@ -263,7 +263,7 @@ header,
     border-radius: 6px;
     font-weight: 500;
     color: #ffffff;
-    background: transparent;
+    background: rgba(14, 118, 168, 1);
     border: 1px #ccc solid;
 }
 
@@ -271,14 +271,14 @@ header,
     content: "";
     position: absolute;
     z-index: -1;
-    background: #0E76A8;
+    background: #111;
     height: 9.3em;
     width: 12.5em;
     border-radius: 50%;
 }
 
 .contato__btn:hover {
-    background: transparent;
+    background: rgba(14, 118, 168, 1);
     color: #fff;
 }
 
@@ -887,6 +887,71 @@ button:hover {
     background-color: var(--color-text-primary);
 }
 
+/* VOLTAR PRO TOPO */
+.botao__voltar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-primary);
+    padding: 0 0 1% 0;
+}
+
+.botao__voltar-btn {
+    width: 3.1em;
+    height: 3.1em;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: relative;
+}
+
+.svgIcon {
+    width: 12px;
+    transition-duration: 0.3s;
+}
+
+.svgIcon path {
+    fill: white;
+}
+
+.botao__voltar-btn:hover {
+    width: 8.7em;
+    border-radius: 3.1em;
+    transition-duration: 0.3s;
+    background-color: var(--color-default-black);
+    align-items: center;
+}
+
+.botao__voltar-btn:hover .svgIcon {
+    transition-duration: 0.3s;
+    transform: translateY(-200%);
+}
+
+.botao__voltar-btn::before {
+    position: absolute;
+    bottom: -20px;
+    content: "Voltar ao topo";
+    color: var(--color-default-white);
+    font-size: 0px;
+}
+
+.botao__voltar-btn:hover::before {
+    font-size: .8em;
+    opacity: 1;
+    bottom: unset;
+    transition-duration: 0.2s;
+}
+
+
+/* FOOTER */
 .rodape {
     display: flex;
     justify-content: center;
