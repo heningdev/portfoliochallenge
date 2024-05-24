@@ -9,7 +9,7 @@
 }
 
 [data-theme="light"] {
-    --color-primary: #bbd5f9 ;
+    --color-primary: #bbd5f9;
     --color-secondary: #f5f5f5;
     --color-default-white: #ffffff;
     --color-default-black: #111;
@@ -33,7 +33,7 @@
     --color-default-white: #111;
     --color-default-black: #ffffff;
     --color-text-primary: #f5f5f5;
-    --color-text-secondary: #bbd5f9 ;
+    --color-text-secondary: #bbd5f9;
     --color-text-hover-btn: #0056b3;
     --color-text-btn: #ffffff;
     --color-bar-nav: rgba(0, 0, 0, 0.8);
@@ -248,18 +248,53 @@ header,
     color: #F9B81F;
 }
 
-.apresentacao__contato {
-    font-size: 1.5em;
-    color: #ffffff;
-    padding: 5% 10%;
-    border-radius: 1.2em;
-    border: 1px #ccc solid;
+.contato__btn {
+    font-family: inherit;
+    display: inline-block;
+    width: 8em;
+    height: 2.6em;
+    line-height: .5em;
+    margin: 1.em;
+    position: relative;
+    overflow: hidden;
+    transition: color .5s;
+    z-index: 1;
+    font-size: 1.2em;
+    border-radius: 6px;
     font-weight: 500;
-    transition: .4s ease;
+    color: #ffffff;
+    background: transparent;
+    border: 1px #ccc solid;
 }
 
-.apresentacao__contato:hover {
-    background: #1a1a2e;
+.contato__btn:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: #0E76A8;
+    height: 9.3em;
+    width: 12.5em;
+    border-radius: 50%;
+}
+
+.contato__btn:hover {
+    background: transparent;
+    color: #fff;
+}
+
+.contato__btn:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+}
+
+.contato__btn:hover:before {
+    top: -30px;
+    left: -30px;
+}
+
+.contato__btn:active:before {
+    transition: background 0s;
 }
 
 /* WAVE TOP */
@@ -369,6 +404,7 @@ header,
     font-weight: 400;
     line-height: 1.3;
     width: 70%;
+    line-height: 1.5;
     color: var(--color-text-primary);
 }
 
