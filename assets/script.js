@@ -50,13 +50,6 @@ window.addEventListener('scroll', function () {
         cabecalho.classList.remove('fixed');
     }
 });
-// EXIBIÇÃO PALAVRA CHAVE CARDS SOBRE MIM
-function showMessage() {
-    document.getElementById("mensagemFlut").style.visibility = "visible";
-}
-function hideMessage() {
-    document.getElementById("mensagemFlut").style.visibility = "hidden";
-}
 
 // LINKS DOS PROJETOS
 document.getElementById('petlife').addEventListener("click", function () {
