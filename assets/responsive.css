@@ -2,6 +2,9 @@
 
 @media  only screen and (max-width: 767px) {
 
+    body {
+        background: var(--color-secondary);
+    }
     .cabecalho__logo {
         visibility: hidden;
     }
@@ -29,6 +32,7 @@
     .custom-shape-divider-top-1716089508,
     .custom-shape-divider-top-1716089865 {
         display: none;
+        margin: 0;
     }
 
     .apresentacao {
@@ -71,7 +75,7 @@
 
     .sobre {
         width: 241%;
-        padding: 30% 0% 8% 0%;
+        padding: 30% 0% 20% 0%;
     }
 
     
@@ -154,7 +158,6 @@
     }
 
     .botao__voltar {
-        position: relative;
         width: 241%;
     }
     .rodape {

@@ -890,7 +890,7 @@ button:hover {
 
 .botao__voltar-btn::before {
     position: absolute;
-    bottom: -20px;
+    bottom: -1.2em;
     content: "Voltar ao topo";
     color: var(--color-default-white);
     font-size: 0px;
