@@ -22,10 +22,10 @@ themeBtn.addEventListener('click', () => {
 //ALEATORIEDADE DE IMAGEM DO TOPO
 document.addEventListener('DOMContentLoaded', function() {
     const images = [
-        '../assets/img/fundo.jpg',
-        '../assets/img/fundo1.jpg',
-        '../assets/img/fundo2.jpg',
-        '../assets/img/fundo3.jpg'
+        '/assets/img/fundo.jpg',
+        '/assets/img/fundo1.jpg',
+        '/assets/img/fundo2.jpg',
+        '/assets/img/fundo3.jpg'
     ];
 
     const randomImage = images[Math.floor(Math.random() * images.length)];
