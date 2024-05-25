@@ -19,19 +19,19 @@ themeBtn.addEventListener('click', () => {
 });
 
 //ALEATORIEDADE DE IMAGEM DO TOPO
-document.addEventListener('DOMContentLoaded', function() {
-    const images = [
-        `../assets/img/fundo.jpg`,
-        `../assets/img/fundo1.jpg`,
-        `../assets/img/fundo2.jpg`,
-        `../assets/img/fundo3.jpg`
-    ];
+// document.addEventListener('DOMContentLoaded', function() {
+//     const images = [
+//         `../assets/img/fundo.jpg`,
+//         `../assets/img/fundo1.jpg`,
+//         `../assets/img/fundo2.jpg`,
+//         `../assets/img/fundo3.jpg`
+//     ];
 
-    const randomImage = images[Math.floor(Math.random() * images.length)];
+//     const randomImage = images[Math.floor(Math.random() * images.length)];
 
-    const bannerElement = document.getElementById('apresentacao');
-    bannerElement.style.backgroundImage = `url(${randomImage})`;
-});
+//     const bannerElement = document.getElementById('apresentacao');
+//     bannerElement.style.backgroundImage = `url(${randomImage})`;
+// });
 
 // TRANSIÇÃO DO MENU DE NAVEGAÇÃO AO ROLAR
 window.addEventListener('scroll', function () {
