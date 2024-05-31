@@ -19,12 +19,12 @@ themeBtn.addEventListener('click', () => {
 });
 
 // ALEATORIEDADE DE IMAGEM DO TOPO
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const images = [
-        "./assets/img/fundo.jpg",
-        "./assets/img/fundo1.jpg",
-        "./assets/img/fundo2.jpg",
-        "./assets/img/fundo3.jpg"
+        "assets/img/fundo.jpg",
+        "assets/img/fundo1.jpg",
+        "assets/img/fundo2.jpg",
+        "assets/img/fundo3.jpg"
     ]
 
     const randomImage = images[Math.floor(Math.random() * images.length)];
@@ -63,13 +63,39 @@ document.getElementById('codf').addEventListener("click", function () {
     window.open("https://heningdev.github.io/decodificador-de-texto/", "_blank");
 })
 
-// LINK GO TO TOP
-document.getElementById('botao__voltar').addEventListener('click', function() {
-    window.scrollTo({top: 0, behavior: 'smooth'});
+// BOTAO "GO TO TOP"
+let goToTopBtn = document.getElementById('gotop__btn');
+let textoGoTop = document.querySelector('.texto__gotop');
+let iconeGoTop = document.querySelector('.fa-circle-arrow-up');
+
+window.onscroll = function () {
+    scrollFunction()
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+        goToTopBtn.style.visibility = 'visible';
+    } else {
+        goToTopBtn.style.visibility = 'hidden';
+    }
+}
+
+function topFunction() {
+    document.body.scrollTo({ top: 0, behavior: 'smooth'});
+    document.documentElement.scrollTo({ top: 0, behavior: 'smooth'});
+}
+
+goToTopBtn.addEventListener('mouseover', () => {
+    textoGoTop.style.display = 'block';
+    iconeGoTop.classList.remove('fa-bounce');
+})
+
+goToTopBtn.addEventListener('mouseout', () => {
+    textoGoTop.style.display = 'none';
+    iconeGoTop.classList.add('fa-bounce');
 })
 
 //LINK CONTATO
-document.getElementById('contato__btn').addEventListener('click', ()  => {
-    document.getElementById('contato').scrollIntoView({ behavior: 'smooth'});
+document.getElementById('contato__btn').addEventListener('click', () => {
+    document.getElementById('contato').scrollIntoView({ behavior: 'smooth' });
 });
-

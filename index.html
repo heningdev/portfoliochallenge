@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="../assets/img/fundo.jpg" as="image">
-    <link rel="../assets/img/fundo1.jpg" as="image">
-    <link rel="../assets/img/fundo2.jpg" as="image">
-    <link rel="../assets/img/fundo3.jpg" as="image">
+    <link rel="assets/img/fundo.jpg" as="image">
+    <link rel="assets/img/fundo1.jpg" as="image">
+    <link rel="assets/img/fundo2.jpg" as="image">
+    <link rel="assets/img/fundo3.jpg" as="image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
@@ -16,13 +16,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="assets/reset.css">
-    <link id="default-theme" rel="stylesheet" href="assets/styles.css">
-    <link rel="stylesheet" href="assets/responsive.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link id="default-theme" rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <link rel="icon" type="image/svg" href="assets/img/icon (1).svg">
 
     <script src="assets/script.js" defer></script>
     <script src="validacao.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.6-beta.15/inputmask.min.js" defer></script>
+
+
     <title>Portfólio - Hening Pereira</title>
 </head>
 
@@ -92,39 +95,39 @@
                 </p>
             </div>
             <div class="sobre__conhecimentos">
-                <div class="sobre__card__square zoom-in" >
+                <div class="sobre__card__square zoom-in">
                     <img src="assets/img/inteligencia emocional.png" alt="Icone inteligência emocional">
                     <div class="mensagem" id="mensagemFlut">Inteligência Emocional</div>
                 </div>
-                <div class="sobre__card__square zoom-in" >
+                <div class="sobre__card__square zoom-in">
                     <img src="assets/img/solução.png" alt="Icone solução de problemas">
                     <div class="mensagem" id="mensagemFlut">Solução de Problemas</div>
                 </div>
-                <div class="sobre__card__square zoom-in" >
+                <div class="sobre__card__square zoom-in">
                     <img src="assets/img/comunicação.png" alt="Icone comunicação">
                     <div class="mensagem" id="mensagemFlut">Comunicação Eficaz</div>
                 </div>
-                <div class="sobre__card__square zoom-in" >
+                <div class="sobre__card__square zoom-in">
                     <img src="assets/img/trabalho equipe.png" alt="Icone trabalho em equipe">
                     <div class="mensagem" id="mensagemFlut">Trabalho em Equipe</div>
                 </div>
-                <div class="sobre__card__square zoom-in" >
+                <div class="sobre__card__square zoom-in">
                     <img src="assets/img/adaptacao.png" alt="Icone flexibilidade e adaptação">
                     <div class="mensagem" id="mensagemFlut">Flexibilidade & Adaptação</div>
                 </div>
-                <div class="sobre__card__square zoom-in" >
+                <div class="sobre__card__square zoom-in">
                     <img src="assets/img/criatividade.png" alt="Icone criatividade e inovação">
                     <div class="mensagem" id="mensagemFlut">Criatividade & Inovação</div>
                 </div>
-                <div class="sobre__card__square zoom-in" >
+                <div class="sobre__card__square zoom-in">
                     <img src="assets/img/aprendiz.png" alt="Icone aprendizado continuo">
                     <div class="mensagem" id="mensagemFlut">Aprendizado Contínuo</div>
                 </div>
-                <div class="sobre__card__square zoom-in" >
+                <div class="sobre__card__square zoom-in">
                     <img src="assets/img/pratica regular.png" alt="Icone prática regular">
                     <div class="mensagem" id="mensagemFlut">Prática Regular</div>
                 </div>
-                <div class="sobre__card__square zoom-in" >
+                <div class="sobre__card__square zoom-in">
                     <img src="assets/img/feedback construtivo.png" alt="Icone feedback construtivo">
                     <div class="mensagem" id="mensagemFlut">Feedback Construtivo</div>
                 </div>
@@ -324,45 +327,51 @@
     </div>
 
     <section id="contato" class="contato">
-        <h2 class="contato__titulo">Contato</h2>
-        <div class="contato__conteudo">
-            <div class="contato__conteudo__descricao">
-                <h2>Envie a sua mensagem</h2>
-                <p>Fico feliz em receber sua mensagem! Estou aqui para ajudar. Após o envio, sua mensagem será
-                    cuidadosamente analisada e farei o possível para retornar o contato o mais breve possível.</p>
-                <img src="assets/img/paper__plane.png" alt="">
+        <div class="container">
+            <div class="form-container">
+                <div class="left-container">
+                    <div class="contato__mensagem">
+                        <h2>Envie sua mensagem</h2>
+                        <p>Fico feliz em receber sua mensagem! Estou aqui para ajudar. Após o envio, sua mensagem será
+                            cuidadosamente analisada e farei o possível para retornar o contato o mais breve possível.
+                        </p>
+
+                    </div>
+                </div>
+                <div class="right-container">
+                    <div class="right-inner-container">
+                        <form id="form" class="formulario" action="#">
+                            <h2 class="contato__titulo">Contato</h2>
+                            <input type="text" name="nome" id="nome" placeholder="Nome *" />
+                            <input type="email" name="email" autocomplete="off" id="email" placeholder="E-mail *" />
+                            <input type="text" name="assunto" id="assunto" placeholder="Assunto" />
+                            <input type="tel" name="telefone" id="telefone" placeholder="Telefone" />
+                            <textarea rows="4" name="mensagem" id="mensagem__form" placeholder="Mensagem *"></textarea>
+                            <button type="submit" class="form_btn">Enviar</button>
+                        </form>
+
+                        <div id="modal" class="modal">
+
+                            <!-- Modal -->
+                            <div class="modal__conteudo">
+                                <span class="fechar">&times;</span>
+                                <div class="modal__conteudo__mensagem">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                    <p>Mensagem enviada. Obrigado!</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
-            <form class="formulario" action="#" method="post">
-                <div class="campo">
-                    <label for="nome">Nome</label>
-                    <input type="text" id="nome" name="nome" required>
-                </div>
-                <div class="campo">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" placeholder="Exemplo@gmail.com" required>
-                </div>
-                <div class="campo">
-                    <label for="assunto">Assunto</label>
-                    <input type="text" id="assunto" name="assunto" required>
-                </div>
-                <div class="campo">
-                    <label for="mensagem">Mensagem</label>
-                    <textarea id="mensagem" name="mensagem" rows="4" placeholder="Digite o motivo do contato aqui..."
-                        required></textarea>
-                </div>
-                <button type="submit">Enviar mensagem</button>
-            </form>
         </div>
     </section>
-    <div class="botao__voltar" id="botao__voltar">
-        <button class="botao__voltar-btn">
-            <svg class="svgIcon" viewBox="0 0 384 512">
-                <path
-                    d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z">
-                </path>
-            </svg>
-        </button>
-    </div>
+    <button onclick="topFunction()" id="gotop__btn" class="top__btn" title="Voltar ao topo">
+        <p class="texto__gotop">Voltar</p>
+        <i class="fa-solid fa-circle-arrow-up fa-bounce">
+        </i>
+    </button>
     <footer id="rodape" class="rodape">
         <p>Desenvolvido para o desafio Alura 2024 - <a href="https://github.com/heningdev" target="_blank">hng.dev</a>
         </p>

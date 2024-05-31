@@ -1,49 +1,75 @@
 // validacao.js
 document.addEventListener("DOMContentLoaded", function() {
     var btnEnviar = document.querySelector(".formulario button[type='submit']");
+    var modal = document.getElementById('modal');
+    var span = document.getElementsByClassName('fechar')[0];
+    var formulario = document.getElementById('form');
+
     btnEnviar.addEventListener("click", function(event) {
         event.preventDefault();
 
         var formularioValido = validarFormulario();
 
         if (formularioValido) {
-            alert("Mensagem enviada. Obrigado!");
-            window.scrollTo(0, 0);
+            modal.style.display = 'block';
         }
     });
+
+    span.onclick = function() {
+        modal.style.display = 'none';
+        formulario.reset();
+        resetFromStyles();
+    }
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'block';
+            formulario.reset();
+        resetFromStyles();
+        }
+    }
 });
 
 function validarFormulario() {
-    var nome = document.getElementById("nome").value;
-    var assunto = document.getElementById("assunto").value;
-    var email = document.getElementById("email").value;
-    var mensagem = document.getElementById("mensagem").value;
+    var nomeCampo = document.getElementById("nome");
+    var emailCampo = document.getElementById("email");
+    var mensagemCampo = document.getElementById("mensagem__form");
+    var nome = nomeCampo.value;
+    var email = emailCampo.value;
+    var mensagem = mensagemCampo.value;
     var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if (nome === "") {
-        alert("Por favor, preencha o campo Nome.");
-        return false;
-    }
+    // Resetar os estados anteriores
+    nomeCampo.classList.remove('error');
+    emailCampo.classList.remove('error');
+    emailCampo.placeholder = 'E-mail';
 
-    if (assunto === "") {
-        alert("Por favor, preencha o campo Assunto.");
+    if (nome === "") {
+        nomeCampo.classList.add('error');
         return false;
+    } else {
+        nomeCampo.classList.remove('error');
     }
 
     if (email === "") {
-        alert("Por favor, preencha o campo E-mail.");
+        emailCampo.classList.add('error');
+        emailCampo.placeholder = 'E-mail é obrigatório';
+        emailCampo.value = ''; 
         return false;
     } else if (!emailRegex.test(email)) {
-        alert("Por favor, insira um email válido.");
+        emailCampo.classList.add('error');
+        emailCampo.placeholder = 'Formato de e-mail inválido';
+        emailCampo.value = ''; 
         return false;
+    } else {
+        emailCampo.classList.remove('error');
+        emailCampo.placeholder = 'E-mail';
     }
 
     if (mensagem.trim() === "") {
-        alert("Por favor, informe o motivo do contato.");
+        mensagemCampo.classList.add('error');
+        mensagemCampo.placeholder = 'Informe o motivo do contato...'
         return false;
     }
 
     return true;
 }
-
-
