@@ -1,8 +1,6 @@
 // validacao.js
 document.addEventListener("DOMContentLoaded", function() {
     var btnEnviar = document.querySelector(".formulario button[type='submit']");
-    var modal = document.getElementById('modal');
-    var span = document.getElementsByClassName('fechar')[0];
     var formulario = document.getElementById('form');
 
     btnEnviar.addEventListener("click", function(event) {
@@ -11,23 +9,19 @@ document.addEventListener("DOMContentLoaded", function() {
         var formularioValido = validarFormulario();
 
         if (formularioValido) {
-            modal.style.display = 'block';
+            openSnack();
+            formulario.reset();
         }
     });
-
-    span.onclick = function() {
-        modal.style.display = 'none';
-        formulario.reset();
-        resetFromStyles();
-    }
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = 'block';
-            formulario.reset();
-        resetFromStyles();
-        }
-    }
 });
+
+function openSnack() {
+    var snackbar = document.getElementById('snackbar');
+    snackbar.className = 'show';
+    setTimeout(function() {
+        snackbar.className = snackbar.className.replace('show', '');
+    }, 3000);
+}
 
 function validarFormulario() {
     var nomeCampo = document.getElementById("nome");
@@ -45,9 +39,11 @@ function validarFormulario() {
 
     if (nome === "") {
         nomeCampo.classList.add('error');
+        nomeCampo.placeholder =  'Nome é obrigatório';
         return false;
     } else {
         nomeCampo.classList.remove('error');
+        nomeCampo.placaholder = 'Nome';
     }
 
     if (email === "") {

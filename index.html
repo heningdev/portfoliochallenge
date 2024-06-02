@@ -346,21 +346,11 @@
                             <input type="text" name="assunto" id="assunto" placeholder="Assunto" />
                             <input type="tel" name="telefone" id="telefone" placeholder="Telefone" />
                             <textarea rows="4" name="mensagem" id="mensagem__form" placeholder="Mensagem *"></textarea>
-                            <button type="submit" class="form_btn">Enviar</button>
+                            <button onclick="openSnack()" type="submit" class="form_btn">Enviar</button>
                         </form>
-
-                        <div id="modal" class="modal">
-
-                            <!-- Modal -->
-                            <div class="modal__conteudo">
-                                <span class="fechar">&times;</span>
-                                <div class="modal__conteudo__mensagem">
-                                    <i class="fa-solid fa-circle-check"></i>
-                                    <p>Mensagem enviada. Obrigado!</p>
-                                </div>
-                            </div>
-
-                        </div>
+                            <div id="snackbar" class="snackbar">Mensagem enviada
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>                     
                     </div>
                 </div>
             </div>
